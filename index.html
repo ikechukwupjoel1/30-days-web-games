@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joel 30 Days Web Games Challenge</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #0f0e17;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 { color: #ffd93d; margin-bottom: 10px; }
+    p  { color: #a7a3c2; margin-bottom: 40px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* A completed game card — clickable */
+    .game-card {
+      background: #1a1828;
+      border: 1px solid #3d3966;
+      border-radius: 12px;
+      padding: 20px;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .game-card:hover {
+      transform: translateY(-4px);
+      border-color: #ffd93d;
+    }
+
+    .game-card .day {
+      font-size: 11px;
+      color: #a7a3c2;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .game-card .emoji { font-size: 36px; margin-bottom: 8px; }
+    .game-card .name  { font-size: 14px; font-weight: 700; }
+
+    /* A game not built yet — greyed out, not clickable */
+    .game-card.locked {
+      opacity: 0.3;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Joel's 30 Days Web Games</h1>
+  <p>One game per day. Click any completed game to play.</p>
+
+  <div class="grid">
+
+    <!-- ✅ Day 01 — completed -->
+    <a href="./day-01/index.html" class="game-card">
+      <div class="day">Day 01</div>
+      <div class="emoji">🃏</div>
+      <div class="name">Emoji Memory Match</div>
+    </a>
+    
+    <!-- 🔒 Day 02 — not built yet, locked -->
+    <a class="game-card locked">
+      <div class="day">Day 02</div>
+      <div class="emoji">🎨</div>
+      <div class="name">CSS Color Mixer</div>
+    </a>
+
+    <!-- 🔒 Day 03 — not built yet, locked -->
+    <div class="game-card locked">
+      <div class="day">Day 03</div>
+      <div class="emoji">🌗</div>
+      <div class="name">Light/Dark Toggle</div>
+    </div>
+
+    <!-- 🔒 Day 04 onwards — all locked for now -->
+    <div class="game-card locked">
+      <div class="day">Day 04</div>
+      <div class="emoji">🏆</div>
+      <div class="name">CSS Animated Podium</div>
+    </div>
+
+    <!-- Keep adding cards as you build -->
+
+  </div>
+
+</body>
+</html>
